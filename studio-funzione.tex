@@ -1,0 +1,640 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\fx}{$f(x)\;$}
+
+\geometry{a4paper, top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm, bindingoffset=5mm}
+
+\title{Studio Completo di Funzione \\ \large Fasi di analisi di una funzione}
+\author{Pietro Poluzzi}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\normalsize
+
+\tableofcontents
+
+\newpage
+
+\section{Teoria introduttiva allo studio di funzione}
+\subsection{Gli insiemi numerici}
+\[ \N \subset \Z \subset \Q \subset \R \subset \C \]
+Il simbolo $\subset$ indica che l'insieme a sinistra è sottoinsieme dell'insieme che si trova a destra: $\N$ è sottoinsieme di $\Z$, che a sua volta è sottoinsieme di $\Q$, che a sua volta è sottoinsieme di $\R$, il quale è sottoinsieme di $\C$ (che si serve di $\I$ per rappresentare i numeri complessi). \newline
+\`{E} importante sottolineare che $\R$ è a sua volta sotto insieme di $\C$ poiché è necessaria una componente immaginaria (un elemento di $\I$) per poter esprimere il valore dell'estrazione di radice in $\R^-$
+\subsection{L'insieme N}
+L'insieme $\N$ dei numeri naturali comprendere tutti gli interi non negativi e lo zero. \[ \N = \{0,\;1,\;2,\;3,\;4,\;5,\;6,\;...\} \]
+\subsubsection{Proprietà dell'insieme N}
+L'insieme $\N$ forma con l'operazione di somma un monoide commutativo e si esprime con la formula $(\N, +)$. Esiste l'elemento neutro rispetto alla somma, ovvero lo zero. Tale operazione gode di tre proprietà:
+\begin{enumerate}
+    \item proprietà commutativa: $\\ a + b = b + a \quad \forall a, b \in \N$
+    \item proprietà associativa
+    \item proprietà distributiva del prodotto rispetto alla somma: $\\ a(b+c)=a \cdot b + a \cdot c \quad \forall a, b, c \in \N$
+\end{enumerate}
+L'insieme $\N$ forma con l'operazione di moltiplicazione un semigruppo commutativo e si esprime con la formula $(\N, \cdot)$. Esiste l'elemento neutro rispetto alla moltiplicazione, ovvero $1$.
+\paragraph{}Grazie alle proprietà enunciate in precedenza si può concludere che $(\N, +, \cdot)$ è un semianello unitario commutativo. Poiché nessun elemento di $\N$, fatta eccezione per lo $0$, ha inverso additivo, allora $(\N, +)$ non è un gruppo; di conseguenza $(\N, +, \cdot)$ non potrà essere né un anello né un campo.
+
+\subsection{L'insieme Z}
+L'insieme $\Z$ comprendere tutti gli interi relativi ovvero positivi, negativi e nulli (lo zero). Si può affermare che: $Z = \N \cup \N^-$ \[ \Z =\{\;..., -4, -3, -2, -1, \;0, +1, +2, +3, +4, ...\} \]
+\subsubsection{Proprietà dell'insieme Z}
+Ogni elemento dell'insieme $\Z$ ha inverso additivo: per ogni elemento $a \in \Z$ esiste $-a \in \Z$ tale che $a + (-a) = 0$.\newline $(\Z, +)$ è un gruppo abeliano: l'addizione gode della proprietà commutativa e della proprietà associativa.
+
+\subsection{L'insieme Q}
+L'insieme $\Q$ dei numeri razionali relativi comprende tutti i numeri che possono essere rappresentati da una frazione ed è l'unione fra l'insieme $\Q^+$ dei numeri razionali assoluti e l'insieme $\Q^-$ dei numeri razionali negativi. Si può quindi affermare che: $\Q = \Q^+ \cup \Q^-$. \newline
+Gli elementi di $\Q$ si esprimono nella forma seguente: \[ c \in \Q \Longleftrightarrow c = \frac{a}{b}, \quad a, b \in \Z, b \neq 0 \]
+\subsubsection{Proprietà dell'insieme Q}
+L'insieme $\Q$ è numerabile: esiste una corrispondenza biunivoca tra l'insieme $\Q$ e l'insieme $\N$.
+\subsection{L'insieme R}
+L'insieme $\R$ dei numeri reali è dato dall'unione dei numeri razionali e dei numeri irrazionali: $\R = \Q \cup \I$ \newline
+Qualsiasi numero intero (che sia positivo, negativo o nullo), razionale o irrazionale appartiene all'insieme $\R$
+\subsubsection{Proprietà dell'insieme R}
+Gli elementi dell'insieme $\R$ possono essere messi in corrispondenza biunivoca con i punti di una retta, detta retta reale. Di conseguenza, $\R$ è un insieme ordinato: dati due elementi qualsiasi è sempre possibile stabilire se il primo elemento è minore, maggiore o uguale al secondo.
+\newline Le operazioni interne ad $\R$ sono:
+\begin{enumerate}
+    \item addizione
+    \item sottrazione
+    \item moltiplicazione
+\end{enumerate}
+Le operazioni esterne ad $\R$ sono invece:
+\begin{enumerate}
+    \item divisione: la divisione per zero non è un'operazione definita.
+    \item estrazione di radice: si consideri un elemento appartenente a $\R^-$, la sua radice non esiste in $\R$.
+\end{enumerate}
+Per ovviare al problema dell'estrazione di radice in $\R$, sono stati introdotti i numeri complessi. \[ \R \subset \C \]
+\newline
+\subsection{L'insieme I}
+L'insieme $\I$ dei numeri decimali illimitati non periodici comprende i numeri reali che non possono essere rappresentati tramite una frazione. Questo insieme comprende numeri come $\sqrt{2}$, $\pi$ (Pi greco), $e$ (numero di Nepero).
+\subsubsection{Proprietà dell'insieme I}
+[...]
+
+\subsection{L'insieme C}
+[...]
+\subsubsection{Proprietà dell'insieme C}
+[...]
+
+\subsection{Simbolistica degli insiemi}
+https://www.youmath.it/domande-a-risposte/view/6616-simboli-insiemi.html
+\`{E} qui riportata la simbolistica degli insiemi in ordine alfabetico.
+
+\subsubsection{Appartenenza e non appartenenza}
+\[ \in \quad \notin \]
+
+\subsubsection{Cardinalità}
+\[ \]
+
+\subsubsection{Complementare dell'insieme}
+\[ \]
+
+\subsubsection{Differenza tra insiemi}
+\[ \]
+
+\subsubsection{Differenza simmetrica}
+\[ \]
+
+\subsubsection{Insieme delle parti}
+\[ \]
+
+\subsubsection{Intersezione}
+\[ \cap \]
+
+\subsubsection{Prodotto cartesiano}
+\[ \]
+
+\subsubsection{Sottoinsieme}
+\[ \subset \]
+
+\subsubsection{Sottoinsieme proprio}
+\[ \subseteq \]
+
+\subsubsection{Sovrainsieme: contiene}
+\[ \supset \]
+
+\subsubsection{Unione}
+\[ \cup \]
+
+\subsection{Operazioni tra insiemi}
+
+\subsection{Proprietà delle operazioni tra insiemi}
+
+\section{Classificazione di una funzione}
+\[ f: A \Rightarrow B \]
+\subsection{Funzione suriettiva}
+Ogni elemento dell'insieme B è rappresentato da almeno un elemento dell'insieme A.
+
+\subsection{Funzione iniettiva}
+
+\subsection{Funzione biettiva}
+
+\section{Individuazione del Dominio}
+\[ Dom(f) = A\]
+\section{Studio della funzione}
+\paragraph{}
+Grazie allo studio di $f(x)$ si trovano eventuali simmetrie, periodicità, i punti in cui essa si annulla e gli intervalli di positività e negatività.
+\subsection{Ricerca di eventuali simmetrie o periodicità}
+\paragraph{}
+Una funzione è pari se $f(x) = f(-x)$ ed è simmetrica rispetto all'asse $y$. Una funzione è dispari se $-f(x) = f(-x)$ ed è simmetrica rispetto all'origine.
+\paragraph{}
+Una funzione è periodica se $f(x) = f(x + T)$. Le funzioni periodiche sono generalmente goniometriche.
+
+\subsection{Intersezioni con gli assi}
+Per individuare le intersezioni con gli assi è necessario fare due sistemi di due equazioni, il primo con $y = 0$ e il secondo con $x = 0$ come mostrato di seguito.
+
+\[
+\systeme*{y = f(x),y = 0}
+\]
+\[
+\systeme*{f(x) = 0,x = 0}
+\]
+
+\subsection{Intervalli di positività e negatività}
+Ponendo $f(x) > 0$ si individuano gli intervalli di positività e negatività della funzione: dove è positiva (sopra l'asse $x$) e dove invece è negativa (sotto l'asse $x$).
+\subsection{Studio della funzione agli estremi del Dominio}
+Questa parte dello studio di funzione comprende:
+\begin{itemize}
+    \item limiti per $x$ che tende a più e meno infinito
+    \item limiti per $x$ che tende ai punti di discontinuità (se presenti)
+    \item individuazione degli asintoti
+    \item studio dei punti di discontinuità
+\end{itemize}
+
+\subsubsection{Regole dell'algebra di infiniti e infinitesimi}
+Siano $a \in\R^+$, $b \in\R^-$, $c \in\R$ e $n \in\R-\{0\}$
+
+\large
+\[
+\begin{array}{cc}
+\frac{0}{n} = 0 \\ & \\
+a^+ - a = 0^+ & (-a)^+ + a = 0^+ \\ & \\
+a^- - a = 0^- & (-a)^- + a = 0^- \\ & \\
+a \cdot 0^+ = 0^+ & a \cdot 0^- = 0^-\\ & \\
+b \cdot 0^+ = 0^- & b \cdot 0^- = 0^+\\ & \\
+0^+ \cdot 0^+ = 0^+ & 0^+ \cdot 0^- = 0^- \\ & \\
+0^- \cdot 0^+ = 0^- & 0^- \cdot 0^- = 0^+ \\ & \\
+\frac{a}{0^+} = + \infty & \frac{a}{0^-} = - \infty \\ & \\
+\frac{b}{0^+} = - \infty & \frac{b}{0^-} = + \infty \\ & \\
+c + \infty = +\infty & c - \infty = -\infty \\ & \\
+a \cdot (+\infty) = +\infty & a \cdot (-\infty) = -\infty \\ & \\
+b \cdot (+\infty) = -\infty & b \cdot (-\infty) = +\infty \\ & \\
+\frac{a}{+\infty} = 0^+ & \frac{a}{-\infty} = 0^-\\ & \\
+\frac{b}{+\infty} = 0^- & \frac{b}{-\infty} = 0^+\\ & \\
+\end{array}
+\]
+
+\[
+\begin{array}{cc}
+\frac{+\infty}{a} = + \infty & \frac{-\infty}{a} = - \infty\\ & \\
+\frac{+\infty}{b} = - \infty & \frac{-\infty}{b} = + \infty\\ & \\
+\frac{0^+}{+\infty} = 0^+ & \frac{0^-}{+\infty} = 0^-\\ & \\
+\frac{0^+}{-\infty} = 0^- & \frac{0^-}{-\infty} = 0^+\\ & \\
+\frac{+\infty}{0^+} = +\infty & \frac{-\infty}{0^+} = -\infty\\ & \\
+\frac{+\infty}{0^-} = -\infty & \frac{-\infty}{0^-} = +\infty\\ & \\
++\infty^{+\infty} = +\infty & +\infty^{-\infty} = 0^+\\ & \\
+& \\ & \\
+& \\ & \\
+& \\ & \\
+& \\ & \\
+& \\ & \\
+\end{array}
+\]
+
+\normalsize
+\subsection{Teoremi sui limiti}
+\subsubsection{Teorema dell'unicità del limite}
+Se per $x \to x_0$ la funzione $f(x)$ ha come limite $l \in \R$, tale limite è unico.
+\subsubsection{Teorema della permanenza del segno}
+Se per $x_0$ la funzione $f(x)$  ha come limite il numero $l \in \R-\{0\}$, esiste un intorno $I(x_0)$, escluso al più $x_0$, in cui  $f(x)$  e $l$ sono entrambi positivi o entrambi negativi.
+\subsubsection{Teorema del confronto}
+Siano $f(x), g(x)$ e $h(x)$ tre funzioni definite nello stesso intorno di $I(x_0)$, escluso al più $x_0$. Se in ogni punti di $I \ne x_0$ si ha che \[ f(x) \le g(x) \le h(x)\] e \[ \lim_{x \to x_0}f(x) = \lim_{x \to x_0}g(x) = l \] allora \[ \lim_{x \to x_0}h(x) = l\]
+
+\subsection{Operazioni sui limiti}
+\subsubsection{Funzioni potenza}
+Sia $n \in\R$ \\ Se $n$ è pari: \[ \lim_{x \to \pm \infty}x^n = +\infty \] Se $n$ è dispari: \[ \lim_{x \to +\infty}x^n = +\infty \quad;\quad  \lim_{x \to -\infty}x^n = -\infty\]
+\subsubsection{Funzioni radice}
+Se $n$ è pari: \[ \lim_{x \to 0^+} \sqrt[n]{x} = 0  \quad;\quad \lim_{x \to +\infty} \sqrt[n]{x} = +\infty\]
+Se $n$ è dispari: \[ \lim_{x \to -\infty} \sqrt[n]{x} = -\infty  \quad;\quad \lim_{x \to +\infty} \sqrt[n]{x} = +\infty\]
+\subsubsection{Funzioni esponenziali}
+Se $a > 1$: \[ \lim_{x \to -\infty} a^x = 0 \quad;\quad \lim_{x \to +\infty} a^x = +\infty\]
+Se $0 < a < 1$: \[ \lim_{x \to -\infty} a^x = +\infty \quad;\quad \lim_{x \to +\infty} a^x = 0\]
+\subsubsection{Funzioni logaritmiche}
+Se $a > 1$: \[ \lim_{x \to 0^+} \log_a x = -\infty \quad;\quad \lim_{x \to +\infty} \log_a x = +\infty\]
+Se $0 < a < 1$: \[ \lim_{x \to 0^+} \log_a x = +\infty \quad;\quad \lim_{x \to +\infty} \log_a x = -\infty\]
+\subsubsection{Limite della somma}
+Se $\lim_{x \to \alpha}f(x) = l$ e $\lim_{x \to \alpha}g(x) = m$ con $l,m \in\R$ allora: \[ \lim_{x \to \alpha}[f(x) + g(x)] = \lim_{x \to \alpha}f(x) + \lim_{x \to \alpha}g(x) = l + m\] Il limite della somma di due funzioni è uguale alla somma dei loro limiti. 
+\subsubsection{Limite del prodotto}
+Se $\lim_{x \to \alpha}f(x) = l$ e $\lim_{x \to \alpha}g(x) = m$ con $l,m \in\R$ allora: \[ \lim_{x \to \alpha}[f(x) \cdot g(x)] = \lim_{x \to \alpha}f(x) \cdot \lim_{x \to \alpha}g(x) = l \cdot m\] Il limite della prodotto di due funzioni è uguale alla prodotto dei loro limiti. \\ Si può inoltre ricavare il seguente teorema: \[ \lim_{x \to \alpha}[f(x)]^n = l^n \quad \forall n \in N-\{0\}\] 
+\subsubsection{Limite del quoziente}
+Se $\lim_{x \to \alpha}f(x) = l$ e $\lim_{x \to \alpha}g(x) = m$ con $l,m \in\R$ e $m \neq 0$ allora: \[ \lim_{x \to \alpha} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \alpha}f(x)}{\lim_{x \to \alpha}g(x)} = \frac{l}{m}\] Il limite del quoziente di due funzioni è uguale al quoziente dei loro limiti. 
+\subsubsection{Limite della potenza}
+Se $f(x) > 0$ e $\lim_{x \to \alpha}f(x) = l>0$ e $\lim_{x \to \alpha}g(x) = m>0$ allora: \[ \lim_{x \to \alpha}[f(x)]^{g(x)} = l^m \]
+\subsubsection{Limite delle funzioni composte}
+Siano $y=f(x)$ e $z=g(x)$ tale che $f(z)$ è continua in $z_0$, sia $\lim_{x \to \alpha}g(x) = z_0$ allora: \[ \lim_{x \to \alpha}f(g(x)) = f(\lim_{x \to \alpha}g(x)) = f(z_0)\]
+
+\subsection{Forme Indeterminate (o di indecisione)}
+\[ +\infty \;,\;-\infty\;,\;0\cdot (\pm \infty)\;,\;\frac{0}{0}\;,\;\frac{\pm \infty}{\pm \infty}\;,\;0^0\;,\;1^{\mp \infty}\;.\]
+
+\subsection{Limiti notevoli}
+\subsubsection{Limite notevole del logaritmo naturale}
+\[ \lim_{x \to 0}\frac{\ln{(1 + x)}}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\ln{(1 + f(x))}}{f(x)} = 1 \]
+
+\subsubsection{Limite notevole della funziona logaritmica}
+Sia $a > 0, a \neq 1$
+\[ \lim_{x \to 0}\frac{\log_a{(1 + x)}}{x} = \frac{1}{\ln{(a)}} \quad;\quad \lim_{f(x) \to 0}\frac{\log_a{(1 + f(x))}}{f(x)} = \frac{1}{\ln{(a)}} \]
+
+\subsubsection{Limite notevole della funzione esponenziale}
+\[ \lim_{x \to 0}\frac{e^x - 1}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{e^{f(x)} - 1}{f(x)} = 1 \]
+Sia $a > 0$
+\[ \lim_{x \to 0}\frac{a^x - 1}{x} = \ln{(a)} \quad;\quad \lim_{f(x) \to 0}\frac{a^{f(x)} - 1}{f(x)} = \ln{(a)} \]
+
+\subsubsection{Limite notevole del numero di Nepero}
+\[ \lim_{x \to \pm \infty} \left(1 + \frac{1}{x} \right)^x = e \quad;\quad \lim_{f(x) \to \pm \infty}\left(1 + \frac{1}{f(x)} \right)^{f(x)} = 1 \]
+
+\subsubsection{Limite notevole della potenza con differenza}
+Sia $c \in \R$
+\[ \lim_{x \to 0}\frac{(1 + x)^c - 1}{x} = c \quad;\quad \lim_{f(x) \to 0}\frac{(1 + f(x))^c - 1}{f(x)} = c\]
+
+\subsubsection{Limite notevole della funzione seno}
+\[ \lim_{x \to 0}\frac{\sin{(x)}}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\sin{(f(x))}}{f(x)} = 1 \]
+
+\subsubsection{Limite notevole della funzione coseno}
+\[ \lim_{x \to 0}\frac{1 - \cos{(x)}}{x^2} = \frac{1}{2} \quad;\quad \lim_{f(x) \to 0}\frac{1 - \cos{f(x)}}{f(x)^2} = \frac{1}{2} \]
+
+\subsubsection{Limite notevole della funzione tangente}
+\[ \lim_{x \to 0}\frac{\tan(x)}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\tan(f(x))}{f(x)} = 1 \]
+
+\subsubsection{Limite notevole dell'arcoseno}
+\[ \lim_{x \to 0}\frac{\arcsin{(x)}}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\arcsin{(f(x))}}{f(x)} = 1 \]
+
+\subsubsection{Limite notevole dell'arcotangente}
+\[ \lim_{x \to 0}\frac{\arctan{(x)}}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\arctan{(f(x))}}{f(x)} = 1 \]
+
+\subsubsection{Limite notevole del seno iperbolico}
+\[ \lim_{x \to 0}\frac{\sinh{(x)}}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\sinh{(f(x))}}{f(x)} = 1 \]
+
+\subsubsection{Limite notevole del coseno iperbolico}
+\[ \lim_{x \to 0}\frac{\cosh{(x)} - 1}{x^2} = \frac{1}{2} \quad;\quad \lim_{f(x) \to 0}\frac{\cosh{(f(x))} - 1}{f(x)^2} = \frac{1}{2} \]
+
+\subsubsection{Limite notevole della tangente iperbolica }
+\[ \lim_{x \to 0}\frac{\tanh{(x)}}{x} = 1 \quad;\quad \lim_{f(x) \to 0}\frac{\tanh{(f(x))}}{f(x)} = 1 \]
+
+\section{Asintoti}
+\subsection{Asintoti verticali}
+Data una funzione $f(x)$, essa presenta un asintoto verticale in $x_0$ se:
+\large
+\[\lim_{x\to x_0} f(x) = -\infty ;\quad \lim_{x\to x_0} f(x) = +\infty ;\quad \lim_{x\to x_0} f(x) = \infty \]
+\normalsize
+Se il limite esiste soltanto per $x \to x_0^+$, l'asintoto è verticale destro. Se invece il limite esiste soltanto per $x \to x_0^-$, l'asintoto è verticale sinistro.
+\subsection{Asintoti orizzontali}
+Data una funzione $f(x)$, essa presenta un asintoto orizzontale in $x_0$ se:
+\large \[\lim_{x\to \infty} f(x) = x_0 \] \normalsize
+La funzione presenta un asintoto orizzontale destro quando:
+\large \[ \lim_{x\to +\infty} f(x) = x_0 \] \normalsize
+La funzione presenta un asintoto orizzontale sinistro quando:
+\large \[ \lim_{x\to -\infty} f(x) = x_0 \] \normalsize
+
+\subsection{Asintoti obliqui}
+La retta $r: y = mx + q$ è un asintoto obliquo per la funzione $f(x)$ se $\overline{PH} \to 0$ (ovvero se la distanza di un punto $P$ dalla funzione tende a zero) per $x \to \infty$. Se $f(x)$ presenta un asintoto obliquo, i valori del coefficiente angolare $m$ e dell'ordinata all'origine $q$ sono: \large \[ m = \lim_{x \to \infty} \frac{f(x)}{x} \quad; \quad \lim_{x \to \infty} (f(x) - mx) \] \normalsize
+Se i valori di $m$ e $q$ sono verificati soltanto per $x \to +\infty$, la retta $r$ è un asintoto obliquo destro della funzione. Se invece i valori di $m$ e $q$ sono verificati soltanto per $x \to -\infty$, la retta $r$ è un asintoto obliquo sinistro della funzione.
+
+\section{Derivata di una funzione}
+\subsection{Rapporto incrementale}
+\paragraph{Definizione\\}
+Sia $I = \;]a;\;b[$ e siano $c \in\R, h \in\R-\{0\}$ con $c,h \in I$. Data una funzione $y= f(x)$ definita in $I$. Dato un punto $A(c;\;f(c))$, si può ottenere un punto $C(c+h; f(c+h))$ da cui si otterranno gli incrementi: \large \[ \Delta x = x_B - x_A = h\] \[ \Delta y = y_B - y_A = f(c+h)-f(c)\] \normalsize
+Il rapporto incrementale di $f$ relativo a $c$ è: \large \[ \frac{\Delta y}{\Delta x} = \frac{f(c+h)-f(c)}{h}\] \normalsize
+
+\paragraph{Esempio \\}
+Data $f(x) = 2x^2-3x$ e $c = 1$. Si calcoli il rapporto incrementale di $f(x)$ relativo a $c$ per un generico incremento $h\neq0$. Si determini innanzitutto $ f(c + h)$: \[ f(1 + h) = 2(1 + h)^2-3(1+h)=2(1+2h+h^2)-3-3h = 1+h+2h^2\] \\ Si calcoli in seguito $f(c)$: $f(1) = -1$ \\ Si calcoli quindi il rapporto incrementale di $f$ relativo a $c$: \large \[ \frac{\Delta y}{\Delta x} = \frac{1+h+2h^2-(-1)}{h} = \frac{h(2h+1)}{h} = 2h+1\] \normalsize
+Il rapporto incrementale rappresenta, al variare di $h$, il coefficiente angolare di una generica retta secante che passa per il punto $A$ del grafico con $x=c$, in questo caso $x=1$.
+
+\subsection{Definizione di derivata}
+Siano fatte le stesse considerazioni relative al rapporto incrementale, quando $h\to0$ allora $B\to A$ e la retta $AB$ tende a diventare la tangente alla curva in $A$. La derivata della funzione $f(x)$ nel punto $c$, quindi $f(c)$, è il rapporto incrementale nel punto $c$ (ovvero il coefficiente angolare di $AB$) che tende al coefficiente angolare della tangente in $A$.
+\newline In simboli: \large \[ f'(c) = \lim_{h\to0}\frac{f(c+h)-f(c)}{h} \] \normalsize
+La funzione è derivabile in $c$ se:
+\begin{enumerate}
+  \item $f(x)$ è definita in un intorno $I(c)$
+  \item $f'(c) = \lim_{h\to0}\frac{f(c+h)-f(c)}{h}$ esiste ed assume un valore finito
+\end{enumerate}
+
+\subsection{Derivata sinistra e derivata destra}
+Data $y = f(x)$ e dato un punto $c \in\R$.
+\newline La derivata sinistra di $f(x)$ nel punto $c$: \[ f_-'(c) = \lim_{h\to0^-}\frac{f(c+h)-f(c)}{h}\]
+\newline La derivata destra di $f(x)$ nel punto $c$: \[ f_+'(c) = \lim_{h\to0^+}\frac{f(c+h)-f(c)}{h}\]
+
+\subsection{Derivata definita}
+Una funzione $f(x)$ è derivabile in un intervallo chiuso e limitato $I=[a;b]$ se:
+\begin{enumerate}
+  \item $f(x)$ è derivabile in tutti i punti di $I$
+  \item la derivata destra in $a$ e la derivata sinistra in $b$ esistono e hanno valore finito
+\end{enumerate}
+
+\subsection{Derivata e velocità di variazione}
+[...]
+
+\section{Derivate fondamentali}
+\subsection{Derivata della funzione costante}
+\paragraph{Teorema \\} La derivata di una funzione costante è zero. $D\;k = 0$
+\paragraph{Dimostrazione \\} Sia $f(x) = k$, allora $f(x+h) = k$, il valore della derivata è: \large \[ f'(x) = \lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \lim_{h\to0}\frac{k-k}{h} = 0 \] \normalsize
+
+\paragraph{Rappresentazione grafica \\}
+La tangente alla retta $y=k$ in ogni suo punto è rappresentata da una retta parallela all'asse x che ha quindi il coefficiente angolare pari a zero.
+
+\subsection{Derivata della funzione identità}
+\paragraph{Teorema \\} La derivata della funzione identità è $1$. $D\;x = 1$
+\large \[ f'(x) = \lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \lim_{h\to0}\frac{x+h-x}{h} = \lim_{h\to0}\frac{h}{h} = 1\] \normalsize
+
+
+\paragraph{Rappresentazione grafica \\}
+La funzione identità è la bisettrice del primo e terzo quadrante e coincide con la tangente al grafico: il coefficiente angolare è uguale a $1$.
+
+\subsection{Derivata della funzione potenza}
+\paragraph{Teorema \\} Siano $\alpha \in\R$ e $x > 0$, allora $D x^\alpha = \alpha x^{\alpha-1}$. Se $\alpha \in Z$ oppure $\alpha = \frac{m}{n}$ con $n$ dispari, il teorema è verificato anche per $x<0$. Inoltre, per $n \in N-\{0\}$ e $\forall x \in\R$ si ottiene $D x^n = nx^{n-1}$.
+\paragraph{Dimostrazione \\}
+\large
+\begin{equation} \label{eq_potenza}
+\begin{split}
+f'(x) = & \lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \lim_{h\to0}\frac{(x+h)^\alpha-x^\alpha}{h} = \\ & = \lim_{h\to0}\frac{x^\alpha(1+\frac{h}{x})^\alpha-x^\alpha}{h} = \lim_{h\to0}x^\alpha\frac{(1+\frac{h}{x})^\alpha-1}{h} = \\ & = \lim_{h\to0}x^{\alpha-1}\frac{(1+\frac{h}{x})^\alpha-1}{\frac{h}{x}}=\alpha x^{\alpha-1}
+\end{split}
+\end{equation}
+\normalsize
+
+\paragraph{1 rappresentazione grafica \\}
+[...]
+
+\paragraph{2 Teorema e Dimostrazione \\}  Siano $n \in\R$ e $x > 0$, 
+\large
+\[ D \frac{1}{x^n} = \frac{n}{x^{n+1}} \]
+\normalsize
+\paragraph{1 rappresentazione grafica \\}
+
+\subsection{Derivata della funzione radice quadrata}
+\paragraph{Teorema \\} Siano $\alpha = \frac{1}{2}$ e $x > 0$. $D\;x^\alpha = \frac{1}{2\sqrt{x}}$ \\ Si ricordi che $(a+b)(a-b)=a^2-b^2$
+\large
+\begin{equation} \label{eq_radice}
+\begin{split}
+f'(x) = & \lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \lim_{h\to0}\frac{\sqrt{x+h}-\sqrt{x}}{h} = \\ & = \lim_{h\to0}\frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}{h(\sqrt{x+h}+\sqrt{x})} = \\ & = \lim_{h\to0}\frac{(x+h-x)}{h(\sqrt{x+h}+\sqrt{x})} = \lim_{h\to0}\frac{h}{h(\sqrt{x+h}+\sqrt{x})} = \\ & = \lim_{h\to0}\frac{1}{h(\sqrt{x}+\sqrt{x})} = \frac{1}{2\sqrt{x}}
+\end{split}
+\end{equation}
+\normalsize
+
+\paragraph{Rappresentazione grafica \\}
+La funzione radice quadrata [...].
+
+\subsection{Derivata della funzione seno}
+\paragraph{Teorema \\} Sia $x$ espresso in radianti $D\;sin(x) = cos(x)$
+\paragraph{Dimostrazione \\} Si ricordi che $sin(\alpha+\beta)=sin(\alpha)\cdot cos(\beta)+cos(\alpha)\cdot sin(\beta)$
+\large
+\begin{equation} \label{eq_seno}
+\begin{split}
+f'(x) = & \lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \lim_{h\to0}\frac{sin(x+h)-sin(x)}{h} = \\ & = \lim_{h\to0}\frac{sin(x)\cdot cos(h)+cos(x)\cdot sin(h)-sin(x)}{h} = \\ & = \lim_{h\to0}\frac{sin(x)[cos(h)-1]+cos(x)\cdot sin(h)}{h} = \\ & = \lim_{h\to0}sin(x)\frac{cos(h)-1}{h}+cos(x)\cdot\frac{sin(h)}{h} = \\ & = sin(x)\cdot0+cos(x)\cdot 1 =cos(x)
+\end{split}
+\end{equation}
+\normalsize
+
+\paragraph{Rappresentazione grafica \\}
+La funzione seno è periodica [...].
+
+\subsection{Derivata della funzione coseno}
+\paragraph{Teorema \\} Sia $x$ espresso in radianti $D\;cos(x) = -sin(x)$
+\paragraph{Dimostrazione \\} Si veda la definizione precedente
+\paragraph{Rappresentazione grafica \\}
+La funzione coseno è periodica [...].
+
+\subsection{Derivata della funzione tangente}
+\paragraph{Teorema \\} La derivata della funzione tangente si può esprimere in due modi. \large \[ D\;tan(x) = \frac{1}{cos^2(x)} = 1+tan^2(x) \] \normalsize
+\paragraph{Dimostrazione \\} [...]
+\paragraph{Rappresentazione grafica \\}
+La funzione tangente [...].
+
+\subsection{Derivata della funzione cotangente}
+\paragraph{Teorema \\} La derivata della funzione cotangente si può esprimere in due modi. \large \[ D\;cot(x) = -\frac{1}{sin^2(x)} = -[1+cot^2(x)] \] \normalsize
+\paragraph{Dimostrazione \\} [...]
+\paragraph{Rappresentazione grafica \\}
+La funzione cotangente [...].
+
+\subsection{Derivata della funzione esponenziale}
+\paragraph{Teorema \\} $D\;\alpha^x = \alpha^x \cdot ln\;\alpha$ \\ Se $\alpha = e$, allora $D\;\alpha^x = \alpha^x$ poiché $ln\;e = 1$
+\paragraph{Dimostrazione \\}
+\large
+\begin{equation} \label{eq_derivata_esponenziale}
+\begin{split}
+f'(x) = & \lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \lim_{h\to0}\frac{\alpha^{x+h}-\alpha^x}{h} = \\ & = \lim_{h\to0}\frac{\alpha^x(\alpha^h-1)}{h} = \lim_{h\to0}(\alpha^x\frac{\alpha^h-1}{h}) = \alpha^x \cdot \ln\;\alpha
+\end{split}
+\end{equation}
+\normalsize
+\paragraph{Rappresentazione grafica \\}
+La funzione esponenziale [...].
+
+\subsection{Derivata della funzione logaritmica}
+\paragraph{Teorema \\} \[ D\;\log_\alpha x = \frac{1}{x} \cdot \log_\alpha e  \] Se $\alpha = e$, allora $D\;ln\;x = \frac{1}{x}$ \\ Inoltre si può osservare che $D\;e^x = e^x$
+\paragraph{Dimostrazione \\} Si ricordi che $\log_\alpha x - \log_\alpha y = \log_\alpha \frac{x}{y}$
+\paragraph{Rappresentazione grafica \\}
+La funzione logaritmica [...].
+
+\subsection{Derivata di una funzione composta}
+\paragraph{Teorema \\} Se $g$ è derivabile nel punto $x_0$ ed $f$ è derivabile nel punto $z=g(x_0)$, allora la funzione composta $y=f(g(x))$ è derivabile in $x_0$. \large \[ D[f(g(x))]=f'(g(x)) \cdot g'(x) \] \normalsize
+
+\paragraph{Dimostrazione \\}
+[...]
+
+\subsection{Derivata della funzione inversa}
+\paragraph{Teorema \\} Se $f(x)$ è invertibile in un intervallo $I$ e derivabile in un punto $x_0 \in I$ con $f'(x_0) \ne 0$, allora anche $f^{-1}$ è derivabile nel punto $y=f'(x_0)$ ed è: \large \[ D[f^{-1}(y)]=\frac{1}{f'(x)} \] \normalsize
+\paragraph{Esempio \\} La funzione $f(x)=x^3+x$ è invertibile in $R$, si calcoli quindi la derivata della funzione inversa nel punto $y=2$. Per applicare il teorema sopra descritto è necessario calcolare il valore di x al quale corrisponde $y=2$, si risolva quindi l'equazione $x^3+x=2\\x^3+x=2\Rightarrow(x-1)(x^2+x+2)=0\Rightarrow x=1 \\f'(x)=3x^2+1$ e $f'(1)=3+1=4 \\$ Si applichi il teorema: $D[f^{-1}(2)]=\frac{1}{f'(1)}=\frac{1}{4}$
+\section{Operazioni con le derivate}
+\subsection{Derivata del prodotto di una costante per una funzione}
+\paragraph{Teorema \\} \[ D\;[k \cdot f(x)]= k \cdot f'(x) \]
+\paragraph{Dimostrazione \\}
+\large
+\begin{equation} \label{eq_derivata_prodotto_costante_funzione}
+\begin{split}
+f'(x) & = \lim_{h\to0}\frac{k \cdot f(x+h)- k \cdot f(x)}{h} = \\ & =  \lim_{h\to0}\frac{k \cdot [f(x+h)- f(x)]}{h} = \\ & = \lim_{h\to0}k\;\frac{f(x+h)- f(x)}{h} =  k\;\cdot\;f'(x)
+\end{split}
+\end{equation}
+\normalsize
+\paragraph{Esempio \\} $\\ y=-3 \; \cdot ln x \xrightarrow{} y' = -3 \cdot \frac{1}{x}= -\frac{3}{x}$
+\subsection{Derivata della somma di funzioni}
+\paragraph{Teorema \\} $ \\ D\;[f(x) + g(x)]= f'(x) + g'(x)$
+\paragraph{Dimostrazione \\}
+\large
+\begin{equation} \label{eq_derivata_somma_funzioni}
+\begin{split}
+f'(x) & = \lim_{h\to0}\frac{[f(x+h)+g(x+h)]-[f(x)+g(x)]}{h} = \\ & = \lim_{h\to0}\frac{[f(x+h)-f(x)]+[g(x+h)-g(x)]}{h} = \\
+& = \lim_{h\to0}\frac{f(x+h)-f(x)}{h} + \lim_{h\to0}\frac{g(x+h)-g(x)}{h} = \\ & = f'(x) + g'(x)
+\end{split}
+\end{equation}
+\normalsize
+
+\paragraph{Esempio \\} $f(x) = x$ e $g(x)=2 \cdot sin(x) \\ y = x+2 \cdot sin(x) \xrightarrow{} y'=1+2 \cdot cos(x)$ 
+
+\subsection{Derivata del prodotto di funzioni}
+\paragraph{Teorema \\} \large \[ D\;[f(x) \cdot g(x)]= f'(x)  \cdot g(x) + f(x) \cdot g'(x) \] \normalsize
+\paragraph{Dimostrazione \\}
+\paragraph{Esempio \\} $f(x) = x$ e $g(x)=sin(x) \\ y = x \cdot sin(x) \xrightarrow{} y'=1 \cdot sin(x) + x \cdot cos(x)$ 
+
+\subsection{Derivata del quoziente di due funzioni} 
+\paragraph{Teorema \\} Sia $g(x) \ne 0$
+\large
+\[ D\;\left[ \frac{f(x)}{g(x)} \right]= \frac{f'(x)  \cdot g(x) + f(x) \cdot g'(x)}{g^2(x)} \] \normalsize
+\paragraph{Dimostrazione \\}
+[...]
+\paragraph{Esempio \\}
+[...]
+
+\subsection{Derivata del reciproco di una funzione}
+\paragraph{Teorema \\} Sia $f(x) \ne 0$ \large \[ D\;\frac{1}{f(x)} = \frac{f'(x)}{f^2(x)} \] \normalsize
+\paragraph{Dimostrazione \\}
+\paragraph{Esempio \\} $f(x)=sin(x)$ \large \[ y=\frac{1}{\sin(x)} \xrightarrow{} y'=-\frac{\cos(x)}{\sin^2(x)}\] \normalsize
+
+\subsection{Derivata di una funzione elevata ad un numero naturale maggiore di uno}
+\paragraph{Teorema \\} Sia $n \in N, n > 1$\large \[ D[f(x)]^n=n \cdot [f(x)]^{n-1} \cdot f'(x)\] \normalsize
+\paragraph{Dimostrazione \\}
+[...]
+\paragraph{Esempio \\}
+[...]
+
+\section{Applicazioni geometriche del concetto di derivata}
+\subsection{Retta tangente e normale ad un una curva}
+\subsubsection{Equazione della retta tangente}
+\large \[y-f(x_0)=f'(x_0) \cdot(x-x_0)\] \normalsize
+\subsubsection{Equazione della retta normale (o perpendicolare)}
+\large \[y-f(x_0)=- \frac{1}{f'(x_0)} \cdot(x-x_0)\] \normalsize
+\paragraph{Esempio \\} Data la funzione $y=f(x)=x^3-2x^2+1$ nel punto di ascissa $x_0=2$. $\\ f(x_0) \Rightarrow f(2)=2^3-2 \cdot 2^2+1=8-8+1=1 \\ f'(x)=3x^2-4x \\ f'(x_0) \Rightarrow f'(2)=3 \cdot 2^2-4\cdot2 = 12-8=4$
+\subparagraph{Equazione della retta tangente} \[ y-f(x_0)=f'(x_0) \cdot(x-x_0) \Rightarrow y-1=4(x-2)\Rightarrow y-1=4x-8 \Rightarrow y=4x-7 \]
+\subparagraph{Equazione della retta normale}  \[ y-f(x_0)=f- \frac{1}{f'(x_0)} \Rightarrow y-1=-\frac{1}{4}(x-2) \Rightarrow y-1=-\frac{1}{4}x+\frac{1}{2} \Rightarrow y=-\frac{1}{4} \] Quindi si possono ricavare i seguenti coefficienti angolari: $\\ m=4, m_\perp = - \frac{1}{4}$
+
+\section{Derivate Parziali}
+Lo studio della derivata prima permette di conoscere se la funzione è crescente, decrescente o decrescente e se ammette massimi e minimi. Le funzioni in due variabili vengono studiate attraverso il comportamento di due derivate: le derivate parziali.
+\paragraph{Definizione \\}Sia $z=f(x;y)$ una funzione con dominio $D$ e sia $P_0(x_0;y_0) \in D$, la derivata parziale di $f$ rispetto a $x$ nel punto $P_0$ è il limite (se esiste ed assume un valore finito) per $h \to 0$ del rapporto incrementale di $f$ nel punto $P_0$ rispetto ad $x_0$. \newline La derivata rispetto ad x si può indicare con i simboli:
+\begin{enumerate}
+  \item \Large $z'_x$ \normalsize
+  \item \Large $f'_x$ \normalsize
+  \item \Large $\frac{\delta f}{\delta x}$
+\end{enumerate}
+\large
+\[f'_x (x_0;y_0)=\lim_{h \to 0} \frac{f(x_0+h; y_0)-f(x_0;y_0)}{h} \]
+\normalsize
+Quando si deriva rispetto a $x$, la variabile $y$ è paragonabile ad una costante; quando invece si deriva rispetto a $y$, la variabile $x$ è equiparabile ad una costante.
+\paragraph{Esempio} $z=x^3+y^2-4xy$ \newline Si consideri $z$ come funzione della sola variabile $x$ derivando quindi rispetto a quest'ultima, si consideri $y$ come una costante.\newline  $ \\z'_x = 3x^2-4y \\$ \newline Si consideri $z$ come funzione della sola variabile $y$  derivando quindi rispetto a quest'ultima, si consideri $x$ come una costante.\newline  $ \\z'_y = 2y-4x$
+
+\subsection{Significato geometrico} Consideriamo la superficie che rappresenta una funzione $z=f(x;y)$, il punto $P_0(x_0;y_0) $ e la sua immagine $A(x_0;y_0;z_0)$. $A$ appartiene alla superficie $S$. Sezionando questa superficie con un piano  passante per $A$ e parallelo al piano $Oxz$, si ottiene la curva $\gamma$. L’equazione del piano $\alpha$ è $y=y_0$. La curva $\gamma$ è l’insieme dei punti di $S$ che hanno ordinata costante $y_0$.
+Il coefficiente angolare della retta $r$ tangente a $\gamma$ in $A$ è $f'_x(x_0;y_0)$. Allo stesso modo, sezionando la superficie $S$ con un piano $\beta$ passante per $A$ e parallelo al piano $Oyz$  si ottiene la curva $\delta$. Il coefficiente angolare della retta $s$ tangente a $\delta$ in $A$ è $f'_y(x_0;y_0)$. 
+
+\subsection{Piano tangente a una superficie} Considerando ancora la superficie $S$, le rette tangenti $r$ e $s$ individuano il piano tangente alla superficie nel punto $A$. Per determinare la sua equazione, bisogna considerare l’equazione di un generico piano passante per $A(x_0;y_0;z_0)$, ovvero: $z-z_0=m(x-x_0)+l(y-y_0)$ \newline Sezionando il piano per $A$ con il piano di equazione $y=y_0$, si ottiene la retta di equazione $z-z_0=m(x-x_0)$ \newline La retta trovata deve essere tangente alla curva in $A$, quindi $m=f'_x(x_0;y_0)$  così come $ l=f'_y(x_0;y_0) \\$ \newline Di conseguenza, se il piano tangente esiste, ha equazione: $\\ z-z_0=f'_x(x_0;y_0)(x-x_0)+f'_y(x_0;y_0)(y-y_0) \\$ \newline Isolando $z$ si ottiene: $z=f(x_0;y_0)+f'_x(x_0;y_0)(x-x_0)+f'_y(x_0;y_0)(y-y_0) \\$ \newline Questa è l’equazione di un piano poiché è lineare nelle variabili $x$, $y$, $z$. Il piano passa per $A$ perché le sue coordinate soddisfano l’equazione.
+
+\paragraph{Esempio 1 \\} Si determini l’equazione del  piano tangente alla superficie $z=4x^2+y^22-6x$  nel suo punto $A(2;3;13)$. Si calcolino innanzitutto le derivate parziali della funzione in $P_0(2;3)$. $\\f'_x=8x-6 \xrightarrow{} f'_x (2;3)=8 \cdot2-6=10 \\f'_y =2y \xrightarrow{} f'_y(2;3)=2 \cdot 3=6$ \newline L’equazione del piano tangente è: $z=13+10(x-2)+6(y-3)z=10x+6y-25$
+
+\paragraph{Esempio 2 \\} Le funzioni in due variabili possono non avere punti in cui non esiste il piano tangente. Si determini il piano tangente alla superficie $z= \sqrt{x^2+y^2}  $ nel suo punto $O(0;0;0)$. \newline
+Si calcolino le derivate parziali prime nel punto $O(0;0;0)$. \large \[ z'_x = \lim_{\Delta x \to 0} \frac{z(0+\Delta x; 0)}{\Delta x} = x_{1,2}\] \normalsize Con $x_1 = -1$ se $\Delta x \to 0^-$ e $x_2 = 1$ se $\Delta x \to 0^+$. \newline
+Se non esiste la derivata parziale rispetto a $x$, allora non esiste la derivata parziale rispetto a $y$. La superficie è un cono indefinito con vertice in $O$. Esistono infiniti piani che hanno in comune con il cono solo il vertice, non esiste quindi il piano tangente al cono nel suo vertice.
+
+\subsection{Differenziale}
+\paragraph{Definizione \\} Siano definiti i seguenti limiti: \large \[ \lim_{\Delta x \to 0} \alpha = 0 \quad;\quad \lim_{\Delta y \to 0} \alpha = 0\] \normalsize La  funzione $f$ è differenziale nel punto $P_0(x_0;y_0)$ se l'incremento $\Delta f$ si può scrivere come segue: $\\ \Delta f=f'_x (x_0;y_0) \cdot \Delta x + f'_y (x_0;y_0) \cdot \Delta y + \alpha \cdot \sqrt{(\Delta x)^2+(\Delta y)^2} \\$ \newline Il differenziale totale di $f$ nel punto $P_0(x_0;y_0)$ si indica con $df$: \large \[ f'_x (x_0;y_0) \cdot \Delta x + f'_y (x_0;y_0) \cdot \Delta y \] \normalsize Il differenziale parziale rispetto a $x$ in $P_0(x_0;y_0)$ è $f'_x (x_0;y_0) \cdot \Delta x$  \newline Il differenziale parziale rispetto a $y$ in $P_0(x_0;y_0)$ è $f'_y (x_0;y_0) \cdot \Delta y$
+\paragraph{}Si considerino $g(x;y)=x$ e $h(x;y)=y$ ed i loro differenziali totali: $\\ dg=dx=1 \cdot \Delta x+0 \cdot \Delta y= \Delta x$ e $dh=dy=0 \cdot \Delta x+1 \cdot \Delta y= \Delta y$ \newline Risulta quindi $dx = \Delta x$ e $dy = \Delta y$, ovvero risulta che gli incrementi $x$ e $y$ sono uguali ai differenziale totali. \newline La differenziabilità assicura continuità.
+
+\subsection{Derivate parziali seconde}
+\paragraph{ Definizione \\} Sia $z=(x;y)$ dotata di derivate parziali $f'_x$ e $f'_y$, ovvero le derivate parziali prime. Se queste sono funzioni derivabili, si possono definire le derivate parziali seconde.
+\newline \par \noindent Derivata parziale rispetto a $x$ della derivata parziale rispetto a $x$: \large $\quad f''_{xx}$ \normalsize
+\newline Derivata parziale rispetto a $x$ della derivata parziale rispetto a $y$: \large $\quad f''_{xy}$ \normalsize
+\newline Derivata parziale rispetto a $y$ della derivata parziale rispetto a $x$: \large $\quad f''_{yx}$ \normalsize
+\newline Derivata parziale rispetto a $y$ della derivata parziale rispetto a $y$: \large $\quad f''_{yy}$ \normalsize
+\newline \newline Le derivate \large $f''_{xy}$ \normalsize e \large $f''_{yx}$ \normalsize sono dette derivate miste.
+\paragraph{Teorema di Schwartz \\}  Se $z=f(x;y)$ ha derivate seconde miste che siano continue in $I$, allora: \large \[ f''_{xy}(x;y) = f''_{yx}(x;y) \quad \forall x \in I \]
+\normalsize
+
+\section{Studio della derivata prima}
+\subsection{Il Teorema di Fermat}
+Il Teorema di Fermat per le derivate e punti stazionari stabilisce che una funzione ammette un punto di massimo o minimo relativo (o assoluto) in un punto $x_0$. In questo punto la funzione è derivabile e la sua derivata prima è nulla.
+
+\subsection{Il Teorema di Rolle}
+Sia $f(x)$ una funzione continua e derivabile nell'intervallo chiuso e limitato $[a; b]$ e derivabile in $]a; b[$. Se $f(x)$ assume lo stesso valore agli estremi dell'intervallo, ovvero $f(a) = f(b)$ allora esiste almeno un punto \(x_0 \in \ ]a; b\ [ \ : f'(x_0) = 0 \)
+
+\subsection{Punti stazionari}
+I punti stazionari (o punti critici) sono punti interni al dominio della funzione e annullano la derivata prima. Considerando $y = f(x)$ una funzione che ha per dominio l'insieme $I = \ ]a; b \ [$ e sia $x_0 \in I$. \\ $x_0$ è un punto stazionari se $f$ è derivabile in esso e se $f'(x_0) = 0$.
+\subsection{Crescenza e decrescenza della funzione}
+Dopo aver trovato i punti stazionari della funzione, si prosegue studiando il segno della derivata prima in modo da trovare i punti di massimo e minimo relativi. Si pone $f'(x) > 0$ e si studia il suo comportamento.\\
+Se $f'(x) < 0$ in $I^-(x_0)$ e $f'(x) > 0$ in $I^+(x_0)$ allora $x_0$ è un punto di minimo relativo e si indica con $m$. Se $f'(x) > 0$ in $I^-(x_0)$ e $f'(x) < 0$ in $I^+(x_0)$ allora $x_0$ è un punto di massimo relativo e si indica con $M$. 
+
+\subsection{Studio dei punti di non derivabilità}
+\subsubsection{Punto angoloso}
+Il punto $x_0$ è un punto angoloso se:
+\large
+\[ \lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = c_1 \in\R \]
+\[ \lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = c_2 \in\R \]
+\normalsize
+
+La funzione $f(x) = |x|$ presenta, per esempio, un punto angolo in $x_0 = 0$
+\large
+\[ \lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{x\to0^+} \frac{|h|}{h} = \lim_{x\to0^+} \frac{+h}{h} = 1 \]
+\[ \lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{x\to0^-} \frac{|h|}{h} = \lim_{x\to0^-} \frac{-h}{h} = -1 \]
+\normalsize
+
+\subsubsection{Cuspide}
+Se in un intorno di zero i limiti destro e sinistro sono infiniti e di segno opposto, la funzione presenta una cuspide. \\ Il punto $x_0$ è un punto di cuspide se:
+$$\lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = +\infty ; \lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = -\infty$$
+oppure \\
+$$\lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = -\infty ; \lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = +\infty$$
+\\ \\
+Si consideri, per esempio, la funzione $f(x) = \sqrt{|x|}$\\
+$$\lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{x\to0^+} \frac{\sqrt{|h|}}{h} = \lim_{x\to0^+} \frac{\sqrt{+h}}{h} = +\infty$$
+$$\lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{x\to0^-} \frac{\sqrt{|h|}}{h} = \lim_{x\to0^-} \frac{\sqrt{-h}}{h} = -\infty$$
+$f(x)$ presenta un punto di cuspide in $x_0 = 0$.
+
+
+\subsubsection{Flessi}
+Un punto di flesso è un punto $x_0 \in I$ in cui la curva cambia concavità nel passare da $I^-$ a $I^+$. La retta tangente nel punto di flesso si chiama tangente inflessionale. 
+\newline
+Sia $f(x)$ continua e derivabile in $I = [a; b]$ e sia $t$ la retta tangente a $f(x)$ in $x_0 \in I$. Poiché $f(x)$ è derivabile, $t$ esiste in ogni $x_0$. \\ Considerando i punti $P(f(x); n)$ e $A(0; n)$ con $n \in I$, si ha una concavità verso l'alto se $y_P > y_A$. L'ordinata di $f(x)$ è maggiore dell'ordinata di $t$ (l'ascissa è la stessa). \\Si ha invece una concavità verso il basso se $y_P < y_A$. L'ordinata di $f(x)$ è minore dell'ordinata di $t$ (l'ascissa è la stessa).
+
+\subsubsection{Flesso ascendente}
+$x_0$ è un punto di flesso ascendente se $f(x)$ è concava verso il basso in $I^-(x_0)$ e concava verso l'alto in $I^+(x_0)$.
+\subsubsection{Flesso discendente}
+$x_0$ è un punto di flesso discendente se $f(x)$ è concava verso l'alto in $I^-(x_0)$ e concava verso il basso in $I^+(x_0)$.
+\subsubsection{Flesso a tangente verticale}
+Se in un intorno di zero i limiti destro e sinistro sono infiniti e di segno uguale, la funzione presenta un fesso a tangente verticale. \ Il punto $x_0$ è un punto di fesso a tangente verticale se:
+$$\lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = +\infty ; \lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = +\infty$$
+oppure \\
+$$\lim_{x\to0^+} \frac{f(x_0 + h) - f(x_0)}{h} = -\infty ; \lim_{x\to0^-} \frac{f(x_0 + h) - f(x_0)}{h} = -\infty$$
+Si consideri, per esempio, la funzione $f(x) = \sqrt[3]{x}$ \newline I flessi a tangente verticale sono tipici delle radici ad indice dispari
+
+\subsubsection{Flesso a tangente orizzontale}
+[...]
+
+\subsection{Determinazione dei punti di massimo e minimo}
+
+\section{Calcolo della derivata seconda}
+\subsection{Concavità}
+La funzione è concava verso l'alto in $x_0$ se, in $I = [a; b]$, il suo grafico si trova sopra la retta tangente di $x_0$. La funzione è concava verso il basso in $x_0$ se, in $I = [a; b]$, il suo grafico si trova sotto la retta tangente di $x_0$.
+\subsection{Determinazione dei punti di flesso}
+[...]
+
+\section{Bibliografia}
+\subsection{Link utili}
+Ecco alcuni link utili utilizzati per scrivere questo testo: \\
+\begin{itemize}
+    \item \href{https://www.youmath.it/domande-a-risposte/view/6490-insieme-q.html}{Insieme $\Q$ su YouMath}
+    \item \href{https://www.youmath.it/domande-a-risposte/view/6513-insieme-r.html}{Insieme $\R$ su YouMath}
+    \item \href{https://www.youmath.it/lezioni/analisi-matematica/numeri-complessi.html}{Insieme $\C$ su YouMath}
+    \item \href{https://www.overleaf.com/learn/latex/Spacing_in_math_mode}{Spaziamento in modalità math}
+    \item \href{https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols}{Simboli matematici}
+    \item \href{https://www.youmath.it/lezioni/analisi-matematica/derivate/396-punti-di-non-derivabilita-punti-angolosi-cuspidi-flessi-a-tangente-verticale.html}{Punti di non derivabilità}
+    \item \href{https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes}{Lettere accentate in LaTeX}
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
